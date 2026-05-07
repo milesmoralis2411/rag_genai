@@ -9,11 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@langchain/community": "^0.2.1",
-    "@langchain/core": "^0.2.1",
-    "@langchain/openai": "^0.1.0",
-    "@langchain/qdrant": "^1.0.2",
-    "langchain": "^0.2.0",
+    "@langchain/community": "latest",
+    "@langchain/core": "latest",
+    "@langchain/openai": "latest",
+    "@langchain/qdrant": "latest",
+    "langchain": "latest",
     "@qdrant/js-client-rest": "^1.8.0",
     "lucide-react": "^0.379.0",
     "next": "14.2.3",
@@ -29,6 +29,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
+    "autoprefixer": "^10.4.19",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
