@@ -18,7 +18,7 @@
     "@qdrant/js-client-rest": "^1.8.0",
     "lucide-react": "^0.379.0",
     "next": "14.2.3",
-    "pdf-parse": "^1.1.1",
+    "pdfjs-dist": "latest",
     "react": "^18",
     "react-dom": "^18"
   },

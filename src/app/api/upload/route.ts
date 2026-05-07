@@ -1,6 +1,5 @@
-import "pdf-parse";
 import { NextRequest, NextResponse } from "next/server";
-import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
+import { WebPDFLoader } from "@langchain/community/document_loaders/web/pdf";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { QdrantVectorStore } from "@langchain/qdrant";
 import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
@@ -24,7 +23,7 @@ export async function POST(req: NextRequest) {
     // Parse the file
     if (file.name.endsWith(".pdf")) {
       const blob = new Blob([buffer], { type: "application/pdf" });
-      const loader = new PDFLoader(blob);
+      const loader = new WebPDFLoader(blob);
       docs = await loader.load();
     } else if (file.name.endsWith(".txt")) {
       const text = buffer.toString("utf-8");
