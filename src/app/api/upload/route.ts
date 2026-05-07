@@ -54,8 +54,9 @@ export async function POST(req: NextRequest) {
     });
 
     return NextResponse.json({ success: true, chunks: splitDocs.length });
-  } catch (err: any) {
-    console.error("Upload Error:", err);
-    return NextResponse.json({ error: err.message || "Internal Server Error" }, { status: 500 });
+  } catch (err: unknown) {
+    const error = err as Error;
+    console.error("Upload Error:", error);
+    return NextResponse.json({ error: error.message || "Internal Server Error" }, { status: 500 });
   }
 }

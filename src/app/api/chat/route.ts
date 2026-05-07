@@ -50,8 +50,9 @@ export async function POST(req: NextRequest) {
     ]);
 
     return NextResponse.json({ answer: response.content });
-  } catch (err: any) {
-    console.error("Chat Error:", err);
-    return NextResponse.json({ error: err.message || "Internal Server Error" }, { status: 500 });
+  } catch (err: unknown) {
+    const error = err as Error;
+    console.error("Chat Error:", error);
+    return NextResponse.json({ error: error.message || "Internal Server Error" }, { status: 500 });
   }
 }
