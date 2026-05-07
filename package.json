@@ -13,6 +13,7 @@
     "@langchain/core": "latest",
     "@langchain/openai": "latest",
     "@langchain/qdrant": "latest",
+    "@langchain/textsplitters": "latest",
     "langchain": "latest",
     "@qdrant/js-client-rest": "^1.8.0",
     "lucide-react": "^0.379.0",
